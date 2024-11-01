@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Sum and Trigonometry</title>
+</head>
+<body>
+  <h2>Results:</h2>
+  <p id="result"></p>
+  <script>
+    const calculator = {
+      sum(numbers) {
+        let total = 0;
+        for (let number of numbers) {
+          total += number;
+        }
+        return total;
+      },
+      toDegrees(radians) {
+        return radians * (180 / Math.PI);
+      }
+    };
+    const numbers = [10, 20, 30, 40];
+    const sumResult = calculator.sum(numbers);
+    const radians = Math.PI / 4;
+    const degreesResult = calculator.toDegrees(radians);
+    document.getElementById("result").textContent = 
+      `Sum: ${sumResult}, Trig (Radians to Degrees): ${degreesResult.toFixed(2)}°`;
+  </script>
+</body>
+</html>
